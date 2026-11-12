@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Key Insights</title>
+<style>
+  :root{
+    --navy:#0F1F41;
+    --sky:#459BDA;
+    --sky-tint:#EAF3FB;
+    --line:#D3D3DC;
+    --muted:#5B6478;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:Inter,"Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
+    background:#fff;color:var(--navy);
+    
+  }
+
+  /* ---------- KEY INSIGHTS ---------- */
+  .cfm-insights{padding:12px 16px 16px;width:100%}
+  .cfm-insights__head{
+    display:flex;align-items:center;gap:10px;
+    font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--navy);margin-bottom:10px;
+  }
+  .cfm-insights__head::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  .cfm-insights__list{display:flex;flex-direction:column;gap:8px}
+
+  .cfm-card{
+    position:relative;
+    border:1px solid var(--line);border-radius:8px;
+    padding:10px 12px 11px 16px;background:#fff;
+  }
+  .cfm-card::before{               /* sky-blue accent bar */
+    content:"";position:absolute;left:0;top:10px;bottom:10px;width:3px;
+    border-radius:0 3px 3px 0;background:var(--sky);
+  }
+  .cfm-card--group::before{background:var(--navy)}
+
+  .cfm-card__top{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+
+  .cfm-entity{
+    display:inline-flex;align-items:center;gap:6px;
+    font-size:12.5px;font-weight:700;line-height:1;
+    padding:5px 9px;border-radius:999px;
+    background:var(--sky);color:#fff;
+  }
+  .cfm-entity--group{background:#fff;color:var(--navy);box-shadow:inset 0 0 0 1.5px var(--navy)}
+  .cfm-entity svg{width:12px;height:12px;flex:none}
+
+  .cfm-type{
+    font-size:11.5px;font-weight:600;color:var(--muted);
+    padding:3px 8px;border:1px solid var(--line);border-radius:4px;line-height:1.2;
+  }
+
+  .cfm-card__text{font-size:14px;line-height:1.45;color:var(--navy)}
+  .cfm-hl{font-weight:700;color:var(--sky);white-space:nowrap}
+  .cfm-card--group .cfm-hl{color:var(--navy)}
+  .cfm-arrow{color:var(--sky);font-weight:700}
+  /* ---------- end component ---------- */
+</style>
+</head>
+<body>
+<section class="cfm-insights" aria-label="Key insights">
+    <div class="cfm-insights__head">Key Insights</div>
+    <div class="cfm-insights__list">
+      <article class="cfm-card">
+        <div class="cfm-card__top">
+          <span class="cfm-entity">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M1.5 8V6.2l1.3-2.7h6.4l1.3 2.7V8z"/><circle cx="3.6" cy="8.6" r="1"/><circle cx="8.4" cy="8.6" r="1"/></svg>
+            Automotive Technology
+          </span>
+          <span class="cfm-type">Market</span>
+        </div>
+        <p class="cfm-card__text">Order intake <span class="cfm-hl">−€35M</span>: EU light-vehicle production forecast <span class="cfm-hl">−4%</span>&nbsp;<span class="cfm-arrow">→</span>&nbsp;likely <span class="cfm-hl">~80%</span> market-driven.</p>
+      </article>
+      <article class="cfm-card">
+        <div class="cfm-card__top">
+          <span class="cfm-entity">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 2h8M2 10h8M6 2v8"/></svg>
+            Steel Europe
+          </span>
+          <span class="cfm-type">Market + Internal</span>
+        </div>
+        <p class="cfm-card__text">Margin <span class="cfm-hl">2.1%</span> vs 4.0%: ~70% from HRC −8% and power +12%; <span class="cfm-hl">€5M</span> internal (blast furnace maintenance).</p>
+      </article>
+      <article class="cfm-card">
+        <div class="cfm-card__top">
+          <span class="cfm-entity">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 9.5C2.5 5 5 2.5 10 2.5 10 7.5 7.5 9.5 4.5 9.5"/><path d="M2 10l4.5-4.5"/></svg>
+            Decarbon Technologies
+          </span>
+          <span class="cfm-type">Structural</span>
+        </div>
+        <p class="cfm-card__text">Above target from a one-off cement plant order (Polysius); green-industry investment still slow (IEA).</p>
+      </article>
+    </div>
+</section>
+</body>
+</html>
